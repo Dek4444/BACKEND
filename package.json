@@ -2,16 +2,15 @@
   "name": "eventms-backend",
   "version": "1.0.0",
   "main": "dist/src/server.js",
-  "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "build": "prisma generate && tsc",
-    "start": "node dist/src/server.js",
-    "postinstall": "prisma generate",
-    "vercel-build": "prisma generate",
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev --name init",
-    "prisma:seed": "tsx prisma/seed.ts"
-  },
+"scripts": {
+  "dev": "tsx watch src/server.ts",
+  "build": "prisma generate",
+  "start": "node api/index.ts",
+  "postinstall": "prisma generate",
+  "prisma:generate": "prisma generate",
+  "prisma:migrate": "prisma migrate dev --name init",
+  "prisma:seed": "tsx prisma/seed.ts"
+},
   "dependencies": {
     "@prisma/client": "^5.22.0",
     "cors": "^2.8.5",
